@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+  <style>
+    body{
+      background-color:wheat;
+    }
+    .input-selector {
+      outline: none;
+      border: none;
+    }
+
+    .multi-selectore {
+      width: max-content;
+    }
+
+    .slect-field,
+    .task,
+    a {
+
+      display: inline-block;
+    }
+
+    .down-arror {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .task {
+      margin-left: 100px;
+      width: 16.802rem;
+    }
+
+
+    .formPopup {
+      display: none;
+      position: fixed;
+      left: 45%;
+      top: 5%;
+      height: 70%;
+      width: 70%;
+      border: 1px black;
+      transform: translate(-50%, 5%);
+      background-color: white;
+      
+    }
+    .inp{
+     max-width: 250px;
+     min-width: 400px;
+    }
+  .logcan{
+    margin-top: 150px;
+  }
+  #log{
+    margin-left: 700px;
+  }
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand bg-white" href="#">
+        <h1>HOME</h1>
+      </a>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+  </nav>
+  <form action="">
+    <h4>Adding a new song</h4><br>
+    <label for="name">song name</label>&emsp;
+    <input type="text"><br><br>
+    <label for="name">song name</label>&emsp;
+    <input type="text"><br><br>
+    <label for="name">song name</label>&emsp;
+    <input type="file"><br><br>
+
+
+
+
+
+    <div class="multi-selector">
+
+      <div class="dropdown">
+        <label for="name">song name</label>&emsp;
+        <button type="button" style="width:160px ;" data-bs-toggle="dropdown">
+          search
+        </button>
+        <ul class="dropdown-menu">
+          <li>task 1
+            <input style="margin-left:100px ;" type="checkbox" name="" id="task1"><br>
+          </li>
+          <li>task 1
+            <input style="margin-left:100px ;" type="checkbox" name="" id="task1"><br>
+          </li>
+          <li>task 1
+            <input style="margin-left:100px ;" type="checkbox" name="" id="task1"><br>
+          </li>
+        </ul>
+
+
+
+<!-- form add artidt  -->
+        <a>
+          <h5 id="cen"><button class="btn btn-primary" onclick="openForm()"> +Add more</button></h5>
+        </a>
+        <div class="loginPopup">
+          <div class="formPopup" id="popupForm">
+            <form class="formContainer">
+              <h5>Add Artist</h5>
+              <hr>
+              <label for="email">Artist name</label>&emsp;&nbsp;&nbsp;
+              <input type="text" class="inp" name="email" required><br><br>
+
+              <label for="psw">Date of Birth</label>&emsp;
+              <input type="date" class="inp" name="psw" required><br><br>
+
+              <label for="psw">Bio</label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+              <textarea class="inp" name="w3review" rows="4" cols="50"></textarea><br>
+
+              <button type="submit" class="logcan" id="log">Log in</button>&emsp;
+              <button type="button" class="logcan" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+        </div><br><br><br><br>
+        <div style="margin-left:100px ;">
+          <button type="cancle">cancle</button>&emsp;&emsp;&emsp;
+          <button type="submit">save</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+
+<script>
+  function openForm() {
+    document.getElementById("popupForm").style.display = "block";
+  }
+  function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+  }
+</script>
+
+</html>
